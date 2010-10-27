@@ -57,6 +57,7 @@ def run_tool(editor):
         x, y, w, h, _ = win.get_geometry()
         x, y = win.get_origin()
         mw, mh = menu.size_request()
+        print x + w - mw, y + h - mh
         return x + w - mw, y + h - mh, False
 
     menu = get_run_menu(prefs, editor)
