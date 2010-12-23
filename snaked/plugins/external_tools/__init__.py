@@ -173,8 +173,9 @@ def run(editor, tool):
 
     if tool.output == 'to-console':
         from snaked.core.console import consume_output
-        proc.stdin.write(stdin)
-        proc.stdin.close()
+        if proc.stdin:
+            proc.stdin.write(stdin)
+            proc.stdin.close()
         consume_output(editor, proc, on_finish)
     else:
         stdout, stderr = proc.communicate(stdin)
