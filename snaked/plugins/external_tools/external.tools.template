@@ -31,6 +31,12 @@
 #
 # I think it self-explanatory.
 #
+# In the shell commands there are a few additional environment variables
+# available:
+#
+#   $FILENAME                 : name of currently active file
+#   $OFFSET
+#
 # Here some examples:
 
 tool "_Run" for "python" from-buffer to-console
@@ -39,4 +45,6 @@ tool "_Run" for "python" from-buffer to-console
 tool "Sphinx _make" for "session:myproject" to-console
     cd doc
     make html
-    
+
+tool "JSLint" for "js" none to-console
+    jslint $FILENAME
