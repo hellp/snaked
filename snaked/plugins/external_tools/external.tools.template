@@ -13,7 +13,7 @@
 # or session context.
 #
 # input is one of: 
-#
+#   none                      : pipes nothing to script
 #   from-buffer               : pipes whole buffer to script
 #   from-selection            : pipes only current selection
 #   from-buffer-or-selection  : pipes selection if exists and buffer otherwise.
